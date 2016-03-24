@@ -9,7 +9,10 @@
          <small><%= place.user.email %></small>
       <% end %>
    </div>
+
    
 <% end %>
 
-   
+<div class="digg_pagination">
+   <%= will_paginate @places %>
+</div>

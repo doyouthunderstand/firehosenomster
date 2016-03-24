@@ -2,7 +2,7 @@ class PlacesController < ApplicationController
    before_action :authenticate_user!, only: [:new, :create]
    
    def index
-      @places = Place.all
+      @places = Place.paginate(:page => params[:page], :per_page => 3)
    end
    
    def new
@@ -17,6 +17,11 @@ class PlacesController < ApplicationController
    def show
       @place = Place.find(params[:id])
    end
+   
+   def edit
+      @place = Place.find(params[:id])
+   end
+   
    private
    
    def place_params
