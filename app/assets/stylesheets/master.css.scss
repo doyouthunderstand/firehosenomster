@@ -17,6 +17,16 @@ body {
    background: url('/assets/white_texture.png');
    font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 }
+
+.place_name_link {
+  color: black;
+}
+
+.place_name_link:hover {
+  color: #F20511;
+  text-shadow: 2px 2px 5px black;
+}
+
 .navbar.navbar-inverse {
    background: url('/assets/real_cf.png');
    border-radius: 0;
