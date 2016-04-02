@@ -1,5 +1,4 @@
 class PhotosController < ApplicationController
-   mount_uploader :picture, PictureUploader
    def create
       @place = Place.find(params[:place_id])
       @place.photos.create(photo_params)

@@ -76,14 +76,16 @@
 <% @place.photos.each do |photo| %>
     <div class="col-xs-12 col-sm-6">
         <%= image_tag photo.picture %>
-        <%= photo.caption %>
+        <div class="caption">
+            <%= photo.caption %>
+        </div>
     </div>
 <% end %>
 
 <div class="clear"></div>
 
 <!-- Comment Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="myCommentModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -106,7 +108,7 @@
 <div class="col-xs-10 col xs-offset-1">
    <h1 class="pull-left">Comments</h1>
    <!-- Button trigger modal -->
-   <button type="button" class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myModal">
+   <button type="button" class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myCommentModal">
      Add a Comment
    </button>
 </div>
